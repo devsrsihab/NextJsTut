@@ -1,6 +1,8 @@
 
 'use client'
 
+import Link from "next/link";
+
 
 const Menus = () => {
 
@@ -17,36 +19,44 @@ const Menus = () => {
     >
       <ul className="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
         <li className="lg:mr-12">
-          <a
+          <Link
             className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-            href="#"
+            href="/"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="lg:mr-12">
-          <a
+          <Link
             className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-            href="#"
+            href="/pricing"
           >
             Pricing
-          </a>
+          </Link>
         </li>
         <li className="lg:mr-12">
-          <a
+          <Link
             className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-            href="#"
+            href="/contact"
           >
             Contact
-          </a>
+          </Link>
         </li>
         <li className="lg:mr-12">
-          <a
+          <Link
             className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-            href="#"
+            href="/contact/office"
+          >
+            Contact Office
+          </Link>
+        </li>
+        <li className="lg:mr-12">
+          <Link
+            className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+            href="/faqs"
           >
             FAQ
-          </a>
+          </Link>
         </li>
       </ul>
       <hr className="mt-4 w-full lg:hidden" />

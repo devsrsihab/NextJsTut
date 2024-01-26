@@ -61,14 +61,13 @@ const Menus = () => {
       </ul>
       <hr className="mt-4 w-full lg:hidden" />
       <div className="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
-        <a
-          href="#"
+        <Link
+          href="/signin"
           title=""
           className="whitespace-nowrap rounded font-medium transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2 hover:text-opacity-50"
         >
-          {" "}
-          Log in{" "}
-        </a>
+         Log in
+        </Link>
         <a
           onClick={(e) => handlerAlert(e.target.innerText)}
           href="#"

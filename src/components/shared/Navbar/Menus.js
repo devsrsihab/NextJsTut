@@ -2,14 +2,12 @@
 'use client'
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 
 const Menus = () => {
 
-  const handlerAlert = (innerText) => {
-    alert(innerText);
-  };
+  const pathname = usePathname()
 
   const router = useRouter()
 
@@ -23,7 +21,7 @@ const Menus = () => {
       <ul className="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
         <li className="lg:mr-12">
           <Link
-            className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+            className={` ${pathname === '/' ? 'active' : '' }  rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2`}
             href="/"
           >
             Home
@@ -31,7 +29,7 @@ const Menus = () => {
         </li>
         <li className="lg:mr-12">
           <Link
-            className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+            className={`${pathname === '/pricing' ? 'active' : '' } rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2`}
             href="/pricing"
           >
             Pricing
@@ -40,7 +38,7 @@ const Menus = () => {
         <li className="lg:mr-12">
           <button
             type="button"
-            className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+            className={` ${pathname === '/contact' ? 'active' : '' } rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2`}
             onClick={() => router.push('/contact')}
           >
             Contact
@@ -48,7 +46,7 @@ const Menus = () => {
         </li>
         <li className="lg:mr-12">
           <Link
-            className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+            className={`${pathname === '/contact/office' ? 'active' : '' } rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2`}
             href="/contact/office"
           >
             Contact Office
@@ -56,7 +54,7 @@ const Menus = () => {
         </li>
         <li className="lg:mr-12">
           <Link
-            className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
+            className={`${pathname === '/faqs' ? 'active' : '' } rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2`}
             href="/faqs"
           >
             FAQ

@@ -150,3 +150,8 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+export const metadata = {
+  title: 'Sign Up Page',
+  description: 'This is sign Up page',
+}

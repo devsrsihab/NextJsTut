@@ -173,3 +173,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title: 'Sign in Page',
+  description: 'This is sign in page',
+}

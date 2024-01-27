@@ -11,6 +11,12 @@ const Menus = () => {
 
   const router = useRouter()
 
+  // handlerAlert
+  const buyNow = () => {
+    alert('Click ok to buy now')
+    return  router.push('/')
+  }
+
 
 
   return (
@@ -71,7 +77,7 @@ const Menus = () => {
          Log in
         </Link>
         <a
-          onClick={(e) => handlerAlert(e.target.innerText)}
+          onClick={buyNow}
           href="#"
           title=""
           className="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 hover:bg-blue-600"

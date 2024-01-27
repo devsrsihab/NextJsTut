@@ -2,6 +2,7 @@
 'use client'
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 const Menus = () => {
@@ -9,6 +10,8 @@ const Menus = () => {
   const handlerAlert = (innerText) => {
     alert(innerText);
   };
+
+  const router = useRouter()
 
 
 
@@ -35,12 +38,13 @@ const Menus = () => {
           </Link>
         </li>
         <li className="lg:mr-12">
-          <Link
+          <button
+            type="button"
             className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
-            href="/contact"
+            onClick={() => router.push('/contact')}
           >
             Contact
-          </Link>
+          </button>
         </li>
         <li className="lg:mr-12">
           <Link
